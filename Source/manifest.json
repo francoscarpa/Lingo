@@ -1,0 +1,36 @@
+{
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{d2924a47-130b-4b7b-a9f3-9c9461d9e455}",
+      "strict_min_version": "42.0"
+    }
+  },
+  "description": "Multi-translator tool for Web content",
+  "icons": {
+    "48": "Images/Logo.png"
+  },
+  "manifest_version": 2,
+  "name": "Lingo",
+  "options_ui": {
+    "page": "OptionsPage/Options.html",
+    "browser_style": true,
+    "chrome_style": true
+  },
+  "permissions": ["activeTab", "scripting", "storage"],
+  "version": "1.0",
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+U"
+      },
+      "description": "Send a 'toggle-feature' event"
+    }
+  },
+  "browser_action": {
+    "default_title": "Lingo",
+    "default_popup": "Popup.html"
+  },
+  "background": {
+    "scripts": ["Background.js"]
+  }
+}
