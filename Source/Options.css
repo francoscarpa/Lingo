@@ -1,4 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 form {
+  padding: 8px;
   display: grid;
   margin-top: 1rem;
   grid-template-columns: 1fr 6fr;
@@ -29,5 +36,53 @@ input {
 }
 
 #buttonsDiv {
-  margin-top: 1rem;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  border-radius: 2px;
+  height: 32px;
+  padding: 0 8px;
+  font-size: 13px;
+  min-width: 132px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+#ResetButton {
+  color: #0c0c0d;
+  background-color: rgba(12, 12, 13, 0.1);
+}
+
+#ResetButton:hover {
+  background-color: rgba(12, 12, 13, 0.2);
+}
+
+#ResetButton:active {
+  background-color: rgba(12, 12, 13, 0.3);
+}
+
+#ResetButton:focus {
+  box-shadow: 0 0 0 1px #0a84ff inset, 0 0 0 1px #0a84ff, 0 0 0 4px rgba(10, 132, 255, 0.3);
+}
+
+#SaveButton {
+  margin-left: 8px;
+  color: #ffffff;
+  background-color: #0060df;
+}
+
+#SaveButton:hover {
+  background-color: #003eaa;
+}
+
+#SaveButton:active {
+  background-color: #002275;
+}
+
+#SaveButton:focus {
+  box-shadow: 0 0 0 1px #0a84ff inset, 0 0 0 1px #0a84ff, 0 0 0 4px rgba(10, 132, 255, 0.3);
 }
