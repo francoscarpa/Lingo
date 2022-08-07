@@ -1,6 +1,6 @@
 function ResetOptions() {
   document.querySelector("#SingleWordInput").value = "https://www.wordreference.com/enit/###";
-  document.querySelector("#MultiWordInput").value = "https://translate.google.it/?hl=it&sl=en&tl=it&text=###&op=translate";
+  document.querySelector("#MultiWordInput").value = "https://translate.google.it/?hl=it&sl=auto&tl=it&text=###&op=translate";
 }
 
 async function RestoreOptions() {
