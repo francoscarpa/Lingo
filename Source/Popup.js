@@ -5,15 +5,13 @@ async function Navigate() {
     if (!selectedText) {
       window.location = "Popup.html";
     } else {
-      if (selectedText != undefined) {
-        var selectedTextEscaped = encodeURIComponent(selectedText);
-        if (selectedText.split(" ").length === 1) {
-          const singleWordSetting = await browser.storage.sync.get("singleWord");
-          window.location = singleWordSetting.singleWord.replace("###", selectedTextEscaped);
-        } else {
-          const multiWordSetting = await browser.storage.sync.get("multiWord");
-          window.location = multiWordSetting.multiWord.replace("###", selectedTextEscaped);
-        }
+      var selectedTextEscaped = encodeURIComponent(selectedText);
+      if (selectedText.split(" ").length === 1) {
+        const singleWordSetting = await browser.storage.sync.get("singleWord");
+        window.location = singleWordSetting.singleWord.replace("###", selectedTextEscaped);
+      } else {
+        const multiWordSetting = await browser.storage.sync.get("multiWord");
+        window.location = multiWordSetting.multiWord.replace("###", selectedTextEscaped);
       }
     }
   } catch (error) {

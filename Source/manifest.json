@@ -16,7 +16,7 @@
     "browser_style": true,
     "chrome_style": true
   },
-  "permissions": ["activeTab", "scripting", "storage"],
+  "permissions": ["<all_urls>", "activeTab", "storage"],
   "version": "1.0",
   "commands": {
     "_execute_browser_action": {

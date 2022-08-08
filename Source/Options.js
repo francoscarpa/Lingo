@@ -5,10 +5,18 @@ function ResetOptions() {
 
 async function RestoreOptions() {
   const singleWordSetting = await browser.storage.sync.get("singleWord");
-  document.querySelector("#SingleWordInput").value = singleWordSetting.singleWord;
+  if (!singleWordSetting) {
+    document.querySelector("#SingleWordInput").value = "https://www.wordreference.com/enit/###";
+  } else {
+    document.querySelector("#SingleWordInput").value = singleWordSetting.singleWord;
+  }
 
   const multiWordSetting = await browser.storage.sync.get("multiWord");
-  document.querySelector("#MultiWordInput").value = multiWordSetting.multiWord;
+  if (!multiWordSetting) {
+    document.querySelector("#MultiWordInput").value = "https://translate.google.it/?hl=it&sl=auto&tl=it&text=###&op=translate";
+  } else {
+    document.querySelector("#MultiWordInput").value = multiWordSetting.multiWord;
+  }
 }
 
 document.addEventListener("DOMContentLoaded", RestoreOptions);
